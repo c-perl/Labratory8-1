@@ -5,10 +5,16 @@
 #include <string>
 using namespace std;
 
-int countCharacter(string str) {
-	int length = str.size();
-	return length; 
-
+int countVowels(const string& str) {
+	int count = 0;
+	for (char ch : str) {
+		
+		char lowercaseCh = tolower(ch);
+		if (lowercaseCh == 'a' || lowercaseCh == 'e' || lowercaseCh == 'i' || lowercaseCh == 'o' || lowercaseCh == 'u') {
+			count++;
+		}
+	}
+	return count;
 }
 
 int main(void) {
@@ -18,8 +24,9 @@ int main(void) {
 		getline(cin, input);
 		if (input == "Q") break;
 		
-		int stringLength = countCharacter(input);
-		cout << stringLength << endl; 
+		int stringCount = countVowels(input);
+		cout << stringCount << endl; 
+
 
 		
 	}
