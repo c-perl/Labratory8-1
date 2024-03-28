@@ -25,8 +25,7 @@ int main(void) {
 		if (input == "Q") break;
 		
 		int stringCount = countVowels(input);
-		cout << stringCount << endl; 
-
+		cout <<"Vowel Count: "<< stringCount << endl;
 
 		
 	}
